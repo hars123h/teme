@@ -37,7 +37,7 @@ export default function Home() {
 
   const controlNavbar = () => {
     console.log(window.scrollY)
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' || true) {
       if (window.scrollY == '0') {
         setShow(false);
         setLastScrollY(0);
@@ -55,7 +55,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' || true) {
       window.addEventListener('scroll', controlNavbar);
 
       // cleanup function
