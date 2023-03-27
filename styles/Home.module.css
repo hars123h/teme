@@ -1,0 +1,10 @@
+.flower {
+  background-image: url('../images/flower_banner.webp');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 12px 8px;
+  height:68px;
+  align-items: center;
+}
+
