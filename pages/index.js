@@ -20,19 +20,22 @@ import banner_img5 from '../images/banner_img5.webp';
 import banner_img6 from '../images/banner_img6.webp';
 import card_one from '../images/card_one.webp';
 import Card from '@/components/Card'
+import Card5 from '@/components/Card5';
 import React, { useEffect, useState } from 'react'
 import RoundSlider from '@/components/RoundSlider'
 import RoundSlider2 from '@/components/RoundSlider2'
 import RoundSlide3 from '@/components/RoundSlide3'
+import RoundSlide4 from '@/components/RoundSlide4'
 import after_pay from '../images/after_pay.webp';
 import klarna from '../images/klarna.webp'
+import Footer from '@/components/Footer'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const controlNavbar = () => {
@@ -140,7 +143,7 @@ export default function Home() {
                   hourTitle=' '
                   minuteTitle=' '
                   secondTitle={' '}
-                  endAt={'2023-3-28 22:26:58'} // Date/Time
+                  endAt={'2023-3-29 22:26:58'} // Date/Time
                 />
                 <Image src={asset11} className='w-[16px]' />
               </div>
@@ -208,9 +211,37 @@ export default function Home() {
                 <Image src={klarna} className='' /> */}
               </div>
             </div>
-
           </div>
         </div>
+
+        <div className='px-[24px] mx-[24px] mt-10 mb-4'>
+          <RoundSlide4 />
+          <div className="grid grid-cols-5 mx-[20px] gap-1">
+            <Card5 /> <Card5 /> <Card5 /> <Card5 /> <Card5 />
+            <Card5 /> <Card5 /> <Card5 /> <Card5 /> <Card5 />
+            <Card5 /> <Card5 /> <Card5 /> <Card5 /> <Card5 />
+            <Card5 /> <Card5 /> <Card5 /> <Card5 /> <Card5 />
+            <Card5 /> <Card5 /> <Card5 /> <Card5 /> <Card5 />
+            <Card5 /> <Card5 /> <Card5 /> <Card5 /> <Card5 />
+            <Card5 /> <Card5 /> <Card5 /> <Card5 /> <Card5 />
+            <Card5 /> <Card5 /> <Card5 /> <Card5 /> <Card5 />
+          </div>
+
+          <div className="flex justify-center items-center mt-[38px] mb-[70px]">
+            <div className='flex justify-center items-center cursor-pointer 
+            gap-2 w-[220px] h-[52px] border border-gray-800 rounded-full hover:shadow-xl'>
+              <div>View more</div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" 
+                className="w-4 h-4 mt-1">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Footer />
 
       </div>
     </>
