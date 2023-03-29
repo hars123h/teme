@@ -80,17 +80,17 @@ export default function Home() {
 
 
         <nav className={`active ${show && 'hidden'}`}>
-          <div className='bg-black'>
+          <div className='border border-gray-800 bg-orange-600'>
             <Banner />
           </div>
-          <div className='bg-[#859f49] opacity-[0.98]'>
+          <div className='bg-orange-600 opacity-[0.98]'>
             <Navbar />
           </div>
 
         </nav>
 
 
-        <div className='pt-[126px]'>
+        <div className='pt-[140px]'>
           <Image src={banner_girl} />
         </div>
 
@@ -143,7 +143,7 @@ export default function Home() {
                   hourTitle=' '
                   minuteTitle=' '
                   secondTitle={' '}
-                  endAt={'2023-3-29 22:26:58'} // Date/Time
+                  endAt={'2023-3-30 22:26:58'} // Date/Time
                 />
                 <Image src={asset11} className='w-[16px]' />
               </div>
