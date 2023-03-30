@@ -17,7 +17,7 @@ const Card = () => {
     }
 
     return (
-        <div className='w-60' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className='w-60 mr-6' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className='overflow-hidden'>
                 <Image src={product1} ref={product_ref1} className={mouse_entered ? 'scale-[1.1] transition-all' : ''} />
             </div>

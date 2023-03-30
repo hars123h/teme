@@ -34,11 +34,11 @@ function RoundSlider() {
 
     return (
         <>
-            <div className='text-center flex flex-col gap-0'>
-                <div className='flex justify-center '>
+            <div className='text-start flex flex-col gap-0'>
+                {/* <div className='flex justify-center '>
                     <Image src={asset33} className='h-[56px] w-auto'/>
-                </div>
-                <div className='text-[24px] font-[800] text-black mt-[-24px] mb-2'>CATEGORIES</div>
+                </div> */}
+                <div className='text-[24px] ml-[40px] font-[500] text-black mt-[24px] mb-2'>CATEGORIES</div>
             </div>
             <ScrollMenu
                 LeftArrow={LeftArrow}
@@ -118,25 +118,25 @@ function Card({ onClick, selected, title, itemId }) {
     return (
         <div
             onClick={() => onClick(visibility)}
-            className='w-[330px] pl-[6px] pr-[8px] mb-[12px] mt-[12px] flex flex-col gap-[18px] '
+            className='w-[140px] pl-[6px] pr-[3px] mb-[12px] mt-[12px] flex flex-col gap-[18px] '
             tabIndex={0}
         >
-            <div className='bg-[#8fa757] flex flex-row rounded-[50px] items-center h-[100px]' onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}>
-                <div className='overflow-hidden w-[90px] border border-[#8fa757] rounded-[50%] m-[5px]'>
+            <div className=' flex flex-col  items-center text-gray-600' onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}>
+                <div className='overflow-hidden w-[90px]  rounded-[50%] m-[5px]'>
                     <Image src={spoons} className={`w-[90px]  rounded-[50%] ${isInside1 ? 'scale-[1.1] transition-all' : ''}`} ref={elementRef1} />
                 </div>
-                <div className="flex flex-col gap-[4px] justify-center flex-grow  pl-[18px]">
-                    <div className='text-[18px] text-[#ffffff] leading-[20px] font-[500]'>Appliances</div>
-                    <div className='text-[16px] text-[#dbebb0] leading-[20px]'>From $0.48</div>
+                <div className="flex flex-col gap-[4px] justify-center flex-grow">
+                    <div className='text-[16px] text-gray-500 text-center leading-[20px] font-[500]'>Camping & Hiking</div>
+                    {/* <div className='text-[16px] text-gray-600 leading-[20px]'>From $0.48</div> */}
                 </div>
             </div>
-            <div className='bg-[#8fa757] flex flex-row rounded-[50px] items-center h-[100px]' onMouseEnter={handleMouseEnter2} onMouseLeave={handleMouseLeave2}>
-                <div className='overflow-hidden w-[90px] border border-[#8fa757] rounded-[50%] m-[5px]'>
+            <div className=' flex flex-col  items-center ' onMouseEnter={handleMouseEnter2} onMouseLeave={handleMouseLeave2}>
+                <div className='overflow-hidden w-[90px]  rounded-[50%] m-[5px]'>
                     <Image src={spoons} className={`w-[90px]  rounded-[50%] ${isInside2 ? 'scale-[1.05] transition-all' : ''}`} ref={elementRef2} />
                 </div>
-                <div className="flex flex-col gap-[4px] justify-center flex-grow pl-[18px]">
-                    <div className='text-[18px] text-[#ffffff] leading-[20px] font-[500]'>Appliances</div>
-                    <div className='text-[16px] text-[#dbebb0] leading-[20px]'>From $0.48</div>
+                <div className="flex flex-col gap-[4px] justify-center flex-grow ">
+                    <div className='text-[16px] text-gray-500 text-center leading-[20px] font-[500]'>Camping & Hiking</div>
+                    {/* <div className='text-[16px] text-gray-600 leading-[20px]'>From $0.48</div> */}
                 </div>
             </div>
 

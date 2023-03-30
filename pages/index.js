@@ -29,7 +29,8 @@ import RoundSlide4 from '@/components/RoundSlide4'
 import after_pay from '../images/after_pay.webp';
 import klarna from '../images/klarna.webp'
 import Footer from '@/components/Footer'
-
+import RoundSlide5 from '../components/RoundSlide5';
+import RoundSlide6 from '../components/RoundSlide6';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -94,40 +95,40 @@ export default function Home() {
           <Image src={banner_girl} />
         </div>
 
-        <div className='px-[44px] mx-[44px] mt-6 h-[48px] '>
-          <div className=' flex justify-between px-3 py-2 hover:bg-[#dfdddd] bg-[#f0f0f0]'>
-            <div className='flex gap-10'>
+        <div className='  h-[48px] '>
+          <div className='  px-3 py-2 hover:bg-[#dfdddd] bg-[#f0f0f0]'>
+            <div className='flex gap-10 justify-around'>
               <div className='flex gap-1 text-[16px] text-black font-[500] items-center'>
-                <Image src={asset7} className='w-[28px]' />
-                <div>Safe payments</div>
+                {/* <Image src={asset7} className='w-[28px]' /> */}
+                <button className='px-4 py-1 border border-gray-800 rounded-md hover:bg-gray-400'>New Arrivals</button>
               </div>
 
               <div className='flex gap-2 text-[16px] text-black font-[500] items-center'>
-                <Image src={asset8} className='w-[28px]' />
-                <div>Secure logistics</div>
+                {/* <Image src={asset8} className='w-[28px]' /> */}
+                <button className='px-4 py-1 border border-gray-800 rounded-md hover:bg-gray-400'>Big Sales</button>
               </div>
 
               <div className='flex gap-2 text-[16px] text-black font-[500] items-center'>
-                <Image src={asset9} className='w-[28px]' />
-                <div>Secure privacy</div>
+                {/* <Image src={asset9} className='w-[28px]' /> */}
+                <button className='px-4 py-1 border border-gray-800 rounded-md hover:bg-gray-400'>Best Seller</button>
               </div>
 
               <div className='flex gap-2 text-[16px] text-black font-[500] items-center'>
-                <Image src={asset10} className='w-[28px]' />
-                <div>Purchase protection</div>
+                {/* <Image src={asset10} className='w-[28px]' /> */}
+                <button className='px-4 py-1 border border-gray-800 rounded-md hover:bg-gray-400'>Premium</button>
               </div>
             </div>
-            <div>
+            {/* <div>
               <div className='flex text-[16px] text-black font-[500] items-center'>
                 <div>Temu keeps you safe</div>
                 <Image src={asset11} className='w-[28px]' />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
 
-        <div className='px-[44px] mx-[44px] mt-6'>
+        {/* <div className='px-[44px] mx-[44px] mt-6'>
           <div className={styles.flower}>
             <div>
               <div className='flex text-[16px] gap-1 text-black font-[500] items-center'>
@@ -150,22 +151,16 @@ export default function Home() {
             </div>
 
           </div>
+        </div> */}
+
+        <div className="  px-[25px] mx-[25px] mt-6">
+          {/* <Image src={card_one} className='w-72 border border-orange-500 rounded-md hover:bg-[#f0f0f0]' /> */}
+          <RoundSlide5 />
         </div>
 
-        <div className="grid grid-cols-5 gap-5 px-[44px] mx-[44px] mt-6">
-          <Image src={card_one} className='w-72 border border-orange-500 rounded-md hover:bg-[#f0f0f0]' />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </div>
-
-        <div className="grid grid-cols-5 gap-5 px-[44px] mx-[44px] mt-6 mb-4">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+        <div className="  px-[25px] mx-[25px] mt-6">
+          {/* <Image src={card_one} className='w-72 border border-orange-500 rounded-md hover:bg-[#f0f0f0]' /> */}
+          <RoundSlide6 />
         </div>
 
         <div className="grid grid-cols-3 gap-5 px-[44px] mx-[44px] mt-16 mb-4">
