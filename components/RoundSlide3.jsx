@@ -5,12 +5,14 @@ import 'react-horizontal-scrolling-menu/dist/styles.css';
 import spoons from '../images/spoons.webp';
 import asset33 from '../images/assets/asset 33.png'
 import Card3 from './Card3';
-
+import asset48 from '../images/product_images/asset 48.webp'
+import asset49 from '../images/product_images/asset 49.webp'
+import asset50 from '../images/product_images/asset 50.webp'
 
 const getItems = () =>
     Array(20)
         .fill(0)
-        .map((_, ind) => ({ id: `element-${ind}` }));
+        .map((_, ind) => ({ id: `element-${ind}`, product_image: asset48 }));
 
 function RoundSlide3() {
     const [items, setItems] = React.useState(getItems);
@@ -41,7 +43,7 @@ function RoundSlide3() {
                     <Image src={asset33} className='h-[56px] w-auto' />
                 </div>
                 <div className='flex items-center relative'>
-                    <div className='text-[24px] flex-grow font-[800] text-black mt-[-24px] mb-2 '>TAKE A CUE FROM THIS STYLISH LOT ...</div>
+                    <div className='text-[24px] flex-grow font-[800] text-black mt-[-24px] mb-2 '>RECENTLY VIEWED PRODUCTS ...</div>
                     {/* <div className='text-[16px] font-[400] absolute bottom-1 right-10 flex items-center gap-1 leading-[24px] hover:underline cursor-pointer  mt-[-24px] mb-2'>
                         <div>View all</div>
                         <span>
@@ -59,13 +61,14 @@ function RoundSlide3() {
                 transitionBehavior="smooth"
                 transitionDuration={2800}
             >
-                {items.map(({ id }) => (
+                {items.map(({ id, product_image }) => (
                     <Card3
                         itemId={id} // NOTE: itemId is required for track items
                         title={id}
                         key={id}
                         onClick={handleClick(id)}
                         selected={isItemSelected(id)}
+                        product_Image={product_image}
                     />
                 ))}
             </ScrollMenu>

@@ -92,7 +92,7 @@ export default function Home() {
 
 
         <div className='pt-[140px]'>
-          <Image src={banner_girl} />
+          <Image src={banner_girl} className='w-full' />
         </div>
 
         <div className='  h-[48px] '>

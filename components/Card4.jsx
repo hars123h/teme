@@ -46,7 +46,7 @@ const Card3 = () => {
             <div className='px-[22px]
              h-[56px]   text-center text-[14px]
               leading-[1.28em] font-[500] text-[#222222]
-               border border-gray-400 rounded-full hover:shadow-xl cursor-pointer hover:border-gray-800 flex justify-center items-center'>
+               border border-gray-400 rounded-full hover:shadow-cstm cursor-pointer hover:border-[#222] flex justify-center items-center'>
                 <div>Recommended</div>
             </div>
         </div>

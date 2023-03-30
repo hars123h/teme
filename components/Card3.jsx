@@ -9,13 +9,14 @@ import stylish_girl from '../images/stylish_girl.webp'
 import vertical from '../images/vertical.svg';
 import insta from '../images/insta.svg';
 
-const Card3 = () => {
+
+const Card3 = ({product_Image}) => {
     const visibility = React.useContext(VisibilityContext);
     const elementRef1 = useRef();
     const elementRef2 = useRef();
     const [isInside1, setIsInside1] = useState(false);
     const [isInside2, setIsInside2] = useState(false);
-
+    console.log(product_Image.src);
 
     const handleMouseEnter1 = () => {
         setIsInside1(true);
@@ -44,7 +45,7 @@ const Card3 = () => {
             onMouseLeave={handleMouseLeave1}
         >
             <div className={`flex relative`}>
-                <Image src={stylish_girl} className="h-[256px] w-[256px]" />
+                <Image src={product_Image} className="h-[256px] w-[256px]" />
                 <Image src={insta} className="h-[24px] w-[24px] absolute top-[218px] left-[218px] z-10" />                
                 <div className={`absolute bottom-0  containerr px-[14px]  h-[120px] w-[256px] ${isInside1?'':'hidden transition-all'}`}>
                     <div className='text-[14px] leading-[20px] font-[400] text-[#ffffff] pt-[12px] pb-[14px]'>Temu has everything that i need for any occasion 
