@@ -19,7 +19,7 @@ import banner_img4 from '../images/banner_img4.webp';
 import banner_img5 from '../images/banner_img5.webp';
 import banner_img6 from '../images/banner_img6.webp';
 import card_one from '../images/card_one.webp';
-import Card from '@/components/Card'
+import Card8 from '@/components/Card8'
 import Card5 from '@/components/Card5';
 import React, { useEffect, useState } from 'react'
 import RoundSlider from '@/components/RoundSlider'
@@ -44,6 +44,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination"
 
 import { Pagination } from 'swiper'
+import Card2 from '@/components/Card2'
+import Footer2 from '@/components/Footer2'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -279,7 +281,7 @@ export default function Home() {
 
         </div>
         :
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center overflow-x-hidden'>
           <Navbar2 />
 
           <div className='relative  w-full mx-auto ' style={{ height: 0.25 * width }} >
@@ -554,6 +556,35 @@ export default function Home() {
           </div>
 
           <div className='bg-gray-100 h-[14px] mt-2 w-full'></div>
+
+          <div className='w-full'>
+          <div className='flex items-center w-full px-2 py-1 mx-1 gap-1'>
+              <div>Recommended</div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" 
+                className="w-4 h-4">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 bg-gray-100">
+            <Card8/> <Card8/>
+            <Card8/> <Card8/>
+            <Card8/> <Card8/>
+            <Card8/> <Card8/>
+            <Card8/> <Card8/>
+            <Card8/> <Card8/>
+          </div>
+
+          <div className="w-full text-center py-3 bg-gray-100">
+            <button className='border border-black py-1 px-4 font-[500] text-black rounded-full'>
+              Show more
+            </button>
+          </div>
+
+          <Footer2/>
 
 
         </div>
