@@ -11,7 +11,7 @@ const Footer2 = () => {
 
     const [drop1Open, setDrop1Open] = useState(false);
     const [drop2Open, setDrop2Open] = useState(false);
-    const [drop3Open, setDrop3Open] = useState(false);
+    const [drop3Open, setDrop3Open] = useState(true);
 
     return (
         <div className='w-full'>

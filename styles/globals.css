@@ -29,6 +29,26 @@
   transition: 0.1s linear;
 }
 
+.active2 {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  transition: 0.1s linear;
+  display: flex;
+  flex-direction: column;
+  z-index: 40;
+  background-color: white;
+  /* padding: 0 7%; */
+}
+
+.hidden2 {
+  width: 100%;
+  z-index: 40;
+  position: fixed;
+  top: -145px;
+  transition: 0.1s linear;
+}
+
 .react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
   display: none;
 }
