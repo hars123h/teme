@@ -43,7 +43,7 @@ import asset79 from '../images/mobile_assets/asset 79.webp';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 import { DownOutlined, SmileOutlined, CheckOutlined } from '@ant-design/icons';
-import { Dropdown, Space } from 'antd';
+import { Dropdown, Popover, Space } from 'antd';
 import { Pagination } from 'swiper'
 import Card2 from '@/components/Card2'
 import Footer2 from '@/components/Footer2'
@@ -146,7 +146,7 @@ export default function Home() {
     setHeight(newHeight);
     setWidth(newWidth);
     console.log("updating height width");
-    console.log(navRef.current.style);
+    //console.log(navRef.current.style);
   }, []);
 
   useEffect(() => {
@@ -335,7 +335,7 @@ export default function Home() {
 
           <div className='px-[24px] mx-[24px] mt-10 mb-4'>
             <RoundSlide4 />
-            <div className="grid grid-cols-5 mx-[20px] gap-1">
+            <div className="grid grid-cols-5 mx-[20px] gap-2">
               <Card5 /> <Card5 /> <Card5 /> <Card5 /> <Card5 />
               <Card5 /> <Card5 /> <Card5 /> <Card5 /> <Card5 />
               <Card5 /> <Card5 /> <Card5 /> <Card5 /> <Card5 />

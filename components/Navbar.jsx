@@ -13,27 +13,230 @@ import down from '../images/down.svg';
 import thumb from '../images/thumb.svg';
 import lens from '../images/lens.svg';
 import usa from '../images/usa.webp';
+import { Popover, Dropdown, Space } from 'antd';
+import asset79 from '../images/mobile_assets/asset 79.webp';
+import { DownOutlined, SmileOutlined, CheckOutlined } from '@ant-design/icons';
+import Link from 'next/link';
+
+
+const CategoryRound = () => {
+    return (
+        <div className='flex flex-col gap-1 items-center mt-2'>
+            <Image src={asset79} className='rounded-[50%] p-1 w-28 h-28' />
+            <div className='text-xs text-center'>Jewelry & Accessories</div>
+        </div>
+    )
+}
+
+const CategoryCard = () => {
+    return (
+        <div className="flex flex-col">
+            <Image src={asset79} />
+            <div className='flex flex-row gap-[2px] w-full'>
+                <div className="flex items-center my-[1px]">
+                    <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg className="w-4 h-4 text-gray-300 dark:text-gray-500 stroke-gray-400" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                </div>
+                <div className='text-[12px] font-400'>(7,122)</div>
+            </div>
+            <div className='flex flex-row gap-[3px] items-center'>
+                <div className='text-[14px] text-black font-[600]'>$0.98</div>
+                <div className='text-[12px]  text-[#888888] font-[400]'>7.8K + sold</div>
+            </div>
+        </div>
+    )
+}
+
+const items = [
+    {
+        key: '1',
+        label: (
+            <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+                Relevance
+            </a>
+        ),
+        icon: <CheckOutlined style={{ color: 'green' }} />,
+        disabled: false
+    },
+    {
+        key: '2',
+        label: (
+            <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+                Top Sales
+            </a>
+        ),
+        disabled: false,
+    },
+    {
+        key: '3',
+        label: (
+            <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+                Most Recent
+            </a>
+        ),
+        disabled: false,
+    },
+    {
+        key: '3',
+        label: (
+            <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+                Price low to high
+            </a>
+        ),
+        disabled: false,
+    },
+    {
+        key: '3',
+        label: (
+            <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+                Price high to low
+            </a>
+        ),
+        disabled: false,
+    },
+];
+
+const content = (
+    <div className=' h-[500px] w-[800px]  flex flex-row'>
+        <div className='w-[20%] bg-white overflow-y-scroll'
+        >
+            <div className='text-sm font-[600] py-3 pr-2 bg-white hover:bg-gray-200 cursor-pointer'>
+                <div className='border-l-4 border-orange-500 pl-1'>Featured</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer '>
+                <div className='pl-1'>Women's Clothing</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2  hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Home & Kitchen</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Women's Curve + Plus</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Kid's Fashion</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Men's Clothing</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Beauty & Health</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Women's Shoes</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Jewelry & Accessories</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Toys & Games</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Electronics</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Arts, Crafts & Sewing</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Patis, Lawn & Garden</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Automotive</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Bags & Luggage</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Women's Underwear & Sleepwear</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Health & Household</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Sports & Outdoors</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Appliances</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Pet Supplies</div>
+            </div>
+            <div className='text-sm font-[400] py-3 pr-2 hover:bg-gray-200 cursor-pointer'>
+                <div className='pl-1'>Office & School Supplies</div>
+            </div>
+        </div>
+        <div className='w-[80%] pt-5 px-3 overflow-y-scroll'
+
+        >
+            <div className='text-md font-[500]'>Shop by category</div>
+            <div className="grid grid-cols-5 gap-2">
+                <Link href="category">
+                    <CategoryRound />
+                </Link>
+                <CategoryRound /> <CategoryRound />
+                <CategoryRound /> <CategoryRound /> <CategoryRound />
+                <CategoryRound /> <CategoryRound /> <CategoryRound />
+                <CategoryRound /> <CategoryRound /> <CategoryRound />
+                <CategoryRound /> <CategoryRound /> <CategoryRound />
+                <CategoryRound /> <CategoryRound /> <CategoryRound />
+                <CategoryRound /> <CategoryRound /> <CategoryRound />
+                <CategoryRound /> <CategoryRound /> <CategoryRound />
+                <CategoryRound /> <CategoryRound /> <CategoryRound />
+            </div>
+            <div className='flex justify-between py-3 items-center'>
+                <div className='text-md font-[500]'>Trending items</div>
+                <Dropdown
+                    placement='topLeft'
+                    menu={{
+                        items,
+                    }}
+                >
+                    <a onClick={(e) => e.preventDefault()}>
+                        <Space className='flex items-center'>
+                            Sort by
+                            <DownOutlined />
+                        </Space>
+                    </a>
+                </Dropdown>
+            </div>
+            <div className="grid grid-cols-5 gap-2">
+                <CategoryCard /> <CategoryCard />
+                <CategoryCard /> <CategoryCard />
+                <CategoryCard /> <CategoryCard />
+                <CategoryCard /> <CategoryCard />
+                <CategoryCard /> <CategoryCard />
+                <CategoryCard /> <CategoryCard />
+                <CategoryCard /> <CategoryCard />
+                <CategoryCard /> <CategoryCard />
+            </div>
+        </div>
+    </div>
+);
+
 
 const Navbar = () => {
     return (
         <div className='bg-orange-600 grid grid-cols-3 mx-[44px] px-[44px]'>
             <div className='flex gap-2 items-center justify-between my-2'>
-                <div className='bg-white rounded-xl border border-gray-700'>
+                <div className='bg-white rounded-xl'>
                     <Image src={logo} alt="temu" className='w-[48px] ' />
                 </div>
                 <div className='flex gap-[5px] items-center  text-white  px-2'>
-
-                    <div className='flex items-center gap-1 hover:bg-[rgb(55,65,81,0.4)] rounded-full transition-all py-4 px-2'>
-                        <div className='text-[16px] flex items-center gap-1 '>
-                            <div>Categories</div>
-                            <div className='mt-1'>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-                                    className="w-4 h-4">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                </svg>
+                    <Popover placement='bottom' content={content} trigger="hover">
+                        <div className='flex items-center gap-1 hover:bg-[rgb(55,65,81,0.4)] rounded-full transition-all py-4 px-2'>
+                            <div className='text-[16px] flex items-center gap-1 '>
+                                <div>Categories</div>
+                                <div className='mt-1'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+                                        className="w-4 h-4">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Popover>
                 </div>
             </div>
 
@@ -42,8 +245,8 @@ const Navbar = () => {
                 <div className='border border-gray-800 w-full flex'>
                     <input className='pl-1 flex-grow outline-none text-gray-500' type="text" placeholder='Best sellers' />
                     <button className='px-2 py-1 bg-white'>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" 
-                        className="w-6 h-6 stroke-blue-600 fill-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+                            className="w-6 h-6 stroke-blue-600 fill-white">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
                     </button>

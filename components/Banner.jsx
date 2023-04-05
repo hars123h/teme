@@ -28,7 +28,7 @@ const Banner = () => {
                         hourTitle=' '
                         minuteTitle=' '
                         secondTitle=' '
-                        endAt={'2023-4-4 22:26:58'} // Date/Time
+                        endAt={'2023-4-12 22:26:58'} // Date/Time
                     />
                 </div>
             </div>
