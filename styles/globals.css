@@ -336,3 +336,7 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
   background: #555; 
   border-radius: 50px
 }
+
+.example::-webkit-scrollbar {
+  display: none;
+}
