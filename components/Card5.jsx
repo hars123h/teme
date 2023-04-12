@@ -1,15 +1,41 @@
 import Image from 'next/image';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import product1 from '../images/product1.webp';
 import fire from '../images/assets/asset 16.webp';
 import baby_shoes from '../images/baby_shoes.webp';
 import sale2 from '../images/sale2.webp';
 import eye from '../images/eye.webp';
 import play from '../images/play.webp';
+import { Box, Typography, Modal, Button } from '@mui/material';
+
 
 const Card = () => {
     const product_ref1 = useRef();
     const [mouse_entered, setMouse_Entered] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => {
+        setOpen((prev) => !prev);
+        
+    }
+
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 400,
+        bgcolor: 'background.paper',
+        border: '2px solid #000',
+        boxShadow: 24,
+        p: 4,
+    };
+
+    useEffect(() => {
+        console.log(open);
+    }, [open]);
+
 
     const handleMouseEnter = () => {
         setMouse_Entered(true);
@@ -20,20 +46,39 @@ const Card = () => {
     }
 
     return (
-        <div className='px-[9px] w-[276px] pt-[9px] pb-[9px] rounded-md hover:shadow-xl hover:border hover:border-gray-50 ' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div onClick={handleOpen} className='px-[9px] w-[276px] pt-[9px] pb-[9px] rounded-md hover:shadow-xl hover:border hover:border-gray-50 cursor-pointer'
+            onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+
+            <Modal
+                open={open}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={style}>
+                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                        Text in a modal
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                    </Typography>
+                    <Button onClick={handleClose}>close</Button>
+                </Box>
+            </Modal>
+
+
             <div className='overflow-hidden relative'>
                 <Image src={baby_shoes} ref={product_ref1} className={`w-[256px] h-[256px] ${mouse_entered ? '' : ''}`} />
                 <div className="absolute bottom-0">
                     <Image src={sale2} className={`w-[256px] ${mouse_entered ? '' : ''}`} />
                     <div className='absolute right-[45px] bottom-[4px] text-[12px]  text-center font-[400]'>39% off discount</div>
                 </div>
-                <div className={`absolute bottom-[39px] text-[14px] items-center leading-[21px] left-[12px] flex gap-1 rounded-full px-[10px] py-[4px] font-[400] bg-[rgba(255,255,255,0.7)] ${mouse_entered?' transition-all':'invisible'}`}>
-                   <Image src={eye} className="w-4 h-4"/>
-                   <div>Quick look</div>
+                <div className={`absolute bottom-[39px] text-[14px] items-center leading-[21px] left-[12px] flex gap-1 rounded-full px-[10px] py-[4px] font-[400] bg-[rgba(255,255,255,0.7)] ${mouse_entered ? ' transition-all' : 'invisible'}`}>
+                    <Image src={eye} className="w-4 h-4" />
+                    <div>Quick look</div>
                 </div>
 
-                <div className={`absolute bottom-[39px] text-[14px] items-center leading-[21px] left-[12px] flex gap-1 rounded-full  font-[400]  ${mouse_entered===false?' transition-all':'invisible'}`}>
-                   <Image src={play} className="w-[32px] h-[32px]"/>               
+                <div className={`absolute bottom-[39px] text-[14px] items-center leading-[21px] left-[12px] flex gap-1 rounded-full  font-[400]  ${mouse_entered === false ? ' transition-all' : 'invisible'}`}>
+                    <Image src={play} className="w-[32px] h-[32px]" />
                 </div>
             </div>
             <div className='font-[400] text-[14px] leading-[1.28em] mt-[5px] flex'>

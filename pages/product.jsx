@@ -1,6 +1,6 @@
-import { Breadcrumb, Carousel, Button, Space, Select } from 'antd';
-import React, {useEffect, useState, useRef} from 'react';
-import { RightOutlined, RightCircleOutlined, LeftCircleOutlined, DownOutlined } from '@ant-design/icons';
+import { Breadcrumb, Carousel, Button, Space, Select, Popover } from 'antd';
+import React, { useEffect, useState, useRef } from 'react';
+import { RightOutlined, RightCircleOutlined, LeftCircleOutlined, DownOutlined, CheckOutlined } from '@ant-design/icons';
 import Image from 'next/image';
 import asset10 from '../images/product_photos/asset 10.webp';
 import asset11 from '../images/product_photos/asset 11.webp';
@@ -57,6 +57,8 @@ const product = () => {
     const [height, setHeight] = useState(0);
     const [width, setWidth] = useState(0);
     const [showCategory, setShowCategory] = useState(false);
+    const [showTags, setShowTags] = useState(false);
+    const [mainImage, setMainImage] = useState(asset19);
     const navRef = useRef();
 
     useEffect(() => {
@@ -150,21 +152,21 @@ const product = () => {
                     <div className='w-1/2 h-[698px] overflow-y-scroll example'>
                         <div className="flex gap-[8px]">
                             <div className='flex flex-col gap-[3px] h-[550px] overflow-y-scroll example scroll-smooth'>
-                                <Image src={asset10} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset11} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset12} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset13} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset14} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset15} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset16} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset17} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset18} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset19} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset20} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset21} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset10} onMouseEnter={() => setMainImage(asset10)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset11} onMouseEnter={() => setMainImage(asset11)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset12} onMouseEnter={() => setMainImage(asset12)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset13} onMouseEnter={() => setMainImage(asset13)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset14} onMouseEnter={() => setMainImage(asset14)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset15} onMouseEnter={() => setMainImage(asset15)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset16} onMouseEnter={() => setMainImage(asset16)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset17} onMouseEnter={() => setMainImage(asset17)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset18} onMouseEnter={() => setMainImage(asset18)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset19} onMouseEnter={() => setMainImage(asset19)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset20} onMouseEnter={() => setMainImage(asset20)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset21} onMouseEnter={() => setMainImage(asset21)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
                             </div>
                             <div className='border border-gray-200'>
-                                <Image src={asset19} className='w-[550px] h-[550px]' alt='image' />
+                                <Image src={mainImage} className='w-[550px] h-[550px]' alt='image' />
                             </div>
                         </div>
                         <div className="flex justify-between flex-row py-3">
@@ -198,22 +200,63 @@ const product = () => {
                                 <div className='h-[5px] w-[32px] bg-white rounded-full'></div>
                             </div>
                         </div>
-                        <div className="flex flex-row gap-2 items-center mt-3">
-                            <div className='flex text-[14px] gap-[2px] items-center justify-center border border-gray-400 rounded-full w-[140px] h-[30px]'>
-                                <div className='font-[400]'>Recommended</div>
-                                <div className='pb-2'><DownOutlined style={{ fontSize: "10px" }} /></div>
-                            </div>
-                            <div className='flex text-[14px] gap-[2px] items-center justify-center border border-gray-400 rounded-full w-[140px] h-[30px]'>
+                        <div className="flex flex-row gap-2 items-center flex-wrap mt-3">
+                            <Popover className='cursor-pointer' content={
+                                <div className='flex flex-col text-xs font-[400] leading-[20px] w-[100px]'>
+                                    <div className="cursor-pointer flex justify-between items-center font-[500]">
+                                        <div>Recommended</div>
+                                        <div className='mb-1'>
+                                            <CheckOutlined style={{ fontSize: '12px', color: 'green' }} />
+                                        </div>
+                                    </div>
+                                    <div className="cursor-pointer flex justify-between items-center">
+                                        <div>Most Recent</div>
+                                    </div>
+                                </div>
+                            }
+                                trigger="click"
+                                placement='bottom'
+                            >
+                                <div className='flex text-[14px] gap-[2px] items-center justify-center border border-gray-400 rounded-full w-[140px] h-[30px]'>
+                                    <div className='font-[400]'>Recommended</div>
+                                    <div className='pb-2'><DownOutlined style={{ fontSize: "10px" }} /></div>
+                                </div>
+                            </Popover>
+                            <div className='cursor-pointer flex text-[14px] gap-[2px] items-center justify-center border border-gray-400 rounded-full w-[140px] h-[30px]'>
                                 <div className='font-[400]'>With Photos</div>
                                 <div className=''>(5)</div>
                             </div>
-                            <div className='flex text-[14px] gap-[2px] items-center justify-center border border-gray-400 rounded-full w-[140px] h-[30px]'>
+                            <div className='cursor-pointer flex text-[14px] gap-[2px] items-center justify-center border border-gray-400 rounded-full w-[140px] h-[30px]'>
                                 <div className='font-[400]'>Buy Again</div>
                                 <div className=''>(1)</div>
                             </div>
-                            <div className='flex text-[14px] gap-[2px] items-center justify-center border border-gray-400 rounded-full w-[31px] h-[31px]'>
-                                <div className='pb-2'><DownOutlined style={{ fontSize: "10px" }} /></div>
-                            </div>
+                            {
+                                showTags === false && (
+                                    <>
+                                        <div onClick={() => setShowTags(!showTags)} className=' cursor-pointer flex text-[14px] gap-[2px] items-center justify-center border border-gray-400 rounded-full w-[31px] h-[31px]'>
+                                            <div className='pb-2'><DownOutlined style={{ fontSize: "10px" }} /></div>
+                                        </div>
+                                    </>
+                                )
+                            }
+                            {
+                                showTags === true && (
+                                    <>
+                                        <div className='cursor-pointer flex text-[14px] gap-[2px] items-center justify-center border border-gray-400 rounded-full w-[140px] h-[30px]'>
+                                            <div className='font-[400]'>Comfortable</div>
+                                            <div className=''>(14)</div>
+                                        </div>
+                                        <div className=' cursor-pointer flex text-[14px] gap-[2px] items-center justify-center border border-gray-400 rounded-full w-[140px] h-[30px]'>
+                                            <div className='font-[400]'>Good Quality</div>
+                                            <div className=''>(5)</div>
+                                        </div>
+                                        <div className='cursor-pointer flex text-[14px] gap-[2px] items-center justify-center border border-gray-400 rounded-full w-[140px] h-[30px]'>
+                                            <div className='font-[400]'>Good</div>
+                                            <div className=''>(8)</div>
+                                        </div>
+                                    </>
+                                )
+                            }
                         </div>
                         <div className="flex flex-col gap-2 mt-5">
                             <div className="flex flex-col gap-4">
@@ -486,17 +529,17 @@ const product = () => {
                         <div className="flex flex-col gap-2 mt-3">
                             <div className='text-[14px] font-[500]'>Color :</div>
                             <div className="flex gap-2 flex-row flex-wrap">
-                                <Image src={asset82} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset83} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset84} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset85} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset86} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset87} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset88} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset89} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset90} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset91} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
-                                <Image src={asset92} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset82} onClick={() => setMainImage(asset82)} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset83} onClick={() => setMainImage(asset83)} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset84} onClick={() => setMainImage(asset84)} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset85} onClick={() => setMainImage(asset85)} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset86} onClick={() => setMainImage(asset86)} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset87} onClick={() => setMainImage(asset87)} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset88} onClick={() => setMainImage(asset88)} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset89} onClick={() => setMainImage(asset89)} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset90} onClick={() => setMainImage(asset90)} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset91} onClick={() => setMainImage(asset91)} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
+                                <Image src={asset92} onClick={() => setMainImage(asset92)} className='w-[48px] h-[48px] hover:border-gray-600 border' alt='image' />
                             </div>
                         </div>
                         <div className="flex gap-2 items-center flex-row mt-3">

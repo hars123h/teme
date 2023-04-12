@@ -341,14 +341,18 @@ const category = () => {
             </div>
             <div className='mx-[44px] px-[44px] mt-6'>
                 <div className="flex flex-row">
-                    <div className='w-[258px] flex flex-col gap-1 h-[600px] overflow-y-scroll pr-1'>
+                    <div className='w-[258px] flex flex-col gap-1 h-[600px] overflow-y-scroll pr-1 example'>
                         <>
                             <div className='text-[24px] leading-[30px] text-[#222222] mb-[25px] font-[400]'>Filters</div>
                             <div className='text-[16px] leading-[18px] text-[#222222] pb-[10px] border-b-[2px] border-gray-100'>Colors</div>
                             <div className="grid grid-cols-5 gap-2">
 
                                 <div className='w-[25px] h-[25px] rounded-[50%] flex items-center justify-center border hover:border-black'>
-                                    <div className='bg-red-600 w-[20px] h-[20px] rounded-[50%]'></div>
+                                    <div className='bg-blue-600 w-[20px] h-[20px] rounded-[50%]'></div>
+                                </div>
+
+                                <div className='w-[25px] h-[25px] rounded-[50%] flex items-center justify-center border hover:border-black'>
+                                    <div className='bg-green-600 w-[20px] h-[20px] rounded-[50%]'></div>
                                 </div>
 
                                 <div className='w-[25px] h-[25px] rounded-[50%] flex items-center justify-center border hover:border-black'>
@@ -356,35 +360,31 @@ const category = () => {
                                 </div>
 
                                 <div className='w-[25px] h-[25px] rounded-[50%] flex items-center justify-center border hover:border-black'>
-                                    <div className='bg-red-600 w-[20px] h-[20px] rounded-[50%]'></div>
+                                    <div className='bg-violet-600 w-[20px] h-[20px] rounded-[50%]'></div>
                                 </div>
 
                                 <div className='w-[25px] h-[25px] rounded-[50%] flex items-center justify-center border hover:border-black'>
-                                    <div className='bg-red-600 w-[20px] h-[20px] rounded-[50%]'></div>
+                                    <div className='bg-purple-600 w-[20px] h-[20px] rounded-[50%]'></div>
                                 </div>
 
                                 <div className='w-[25px] h-[25px] rounded-[50%] flex items-center justify-center border hover:border-black'>
-                                    <div className='bg-red-600 w-[20px] h-[20px] rounded-[50%]'></div>
+                                    <div className='bg-black w-[20px] h-[20px] rounded-[50%]'></div>
                                 </div>
 
                                 <div className='w-[25px] h-[25px] rounded-[50%] flex items-center justify-center border hover:border-black'>
-                                    <div className='bg-red-600 w-[20px] h-[20px] rounded-[50%]'></div>
+                                    <div className='bg-indigo-800 w-[20px] h-[20px] rounded-[50%]'></div>
                                 </div>
 
                                 <div className='w-[25px] h-[25px] rounded-[50%] flex items-center justify-center border hover:border-black'>
-                                    <div className='bg-red-600 w-[20px] h-[20px] rounded-[50%]'></div>
+                                    <div className='bg-orange-600 w-[20px] h-[20px] rounded-[50%]'></div>
                                 </div>
 
                                 <div className='w-[25px] h-[25px] rounded-[50%] flex items-center justify-center border hover:border-black'>
-                                    <div className='bg-red-600 w-[20px] h-[20px] rounded-[50%]'></div>
+                                    <div className='bg-red-300 w-[20px] h-[20px] rounded-[50%]'></div>
                                 </div>
 
                                 <div className='w-[25px] h-[25px] rounded-[50%] flex items-center justify-center border hover:border-black'>
-                                    <div className='bg-red-600 w-[20px] h-[20px] rounded-[50%]'></div>
-                                </div>
-
-                                <div className='w-[25px] h-[25px] rounded-[50%] flex items-center justify-center border hover:border-black'>
-                                    <div className='bg-red-600 w-[20px] h-[20px] rounded-[50%]'></div>
+                                    <div className='bg-pink-600 w-[20px] h-[20px] rounded-[50%]'></div>
                                 </div>
 
 
@@ -417,8 +417,14 @@ const category = () => {
                             <div className="flex flex-col gap-1">
                                 <Radio.Group value={value} onChange={onChange}>
                                     <Space direction='vertical'>
-                                        <Radio value={3}>Bears</Radio>
-                                        <Radio value={2}>Reptiles</Radio>
+                                        <Radio value={3}>Comic</Radio>
+                                        <Radio value={2}>Video game</Radio>
+                                        <Radio value={4}>Bears</Radio>
+                                        <Radio value={5}>Rabbits</Radio>
+                                        <Radio value={6}>Musical</Radio>
+                                        <Radio value={7}>Arts</Radio>
+                                        <Radio value={8}>Bears</Radio>
+                                        <Radio value={9}>House-cats</Radio>
                                     </Space>
                                 </Radio.Group>
                             </div>
@@ -434,8 +440,13 @@ const category = () => {
                             <div className="flex flex-col gap-1">
                                 <Radio.Group value={value} onChange={onChange}>
                                     <Space direction='vertical'>
-                                        <Radio value={3}>Bears</Radio>
-                                        <Radio value={2}>Reptiles</Radio>
+                                        <Radio value={3}>Anime</Radio>
+                                        <Radio value={2}>Video game</Radio>
+                                        <Radio value={4}>Movie</Radio>
+                                        <Radio value={5}>Comic</Radio>
+                                        <Radio value={6}>Science Fiction</Radio>
+                                        <Radio value={7}>Sports</Radio>
+                                        <Radio value={8}>X-games</Radio>
                                     </Space>
                                 </Radio.Group>
                             </div>
@@ -450,8 +461,12 @@ const category = () => {
                             <div className="flex flex-col gap-1">
                                 <Radio.Group value={value} onChange={onChange}>
                                     <Space direction='vertical'>
-                                        <Radio value={3}>Bears</Radio>
-                                        <Radio value={2}>Reptiles</Radio>
+                                        <Radio value={3}>Party</Radio>
+                                        <Radio value={2}>Christmas</Radio>
+                                        <Radio value={4}>New Year</Radio>
+                                        <Radio value={5}>Valentine's day</Radio>
+                                        <Radio value={6}>Wedding</Radio>
+                                        <Radio value={7}>Easter</Radio>
                                     </Space>
                                 </Radio.Group>
                             </div>
@@ -466,8 +481,10 @@ const category = () => {
                             <div className="flex flex-col gap-1">
                                 <Radio.Group value={value} onChange={onChange}>
                                     <Space direction='vertical'>
-                                        <Radio value={3}>Bears</Radio>
-                                        <Radio value={2}>Reptiles</Radio>
+                                        <Radio value={3}>Interactive Audio</Radio>
+                                        <Radio value={2}>Sound</Radio>
+                                        <Radio value={4}>Light</Radio>
+                                        <Radio value={5}>Remote Controlled</Radio>
                                     </Space>
                                 </Radio.Group>
                             </div>
@@ -482,8 +499,10 @@ const category = () => {
                             <div className="flex flex-col gap-1">
                                 <Radio.Group value={value} onChange={onChange}>
                                     <Space direction='vertical'>
-                                        <Radio value={3}>Bears</Radio>
-                                        <Radio value={2}>Reptiles</Radio>
+                                        <Radio value={3}>12 Years & Up</Radio>
+                                        <Radio value={2}>5 to 7 Years</Radio>
+                                        <Radio value={4}>2 to 4 Years</Radio>
+                                        <Radio value={5}>Birth to 24 months</Radio>
                                     </Space>
                                 </Radio.Group>
                             </div>
@@ -498,8 +517,28 @@ const category = () => {
                             <div className="flex flex-col gap-1">
                                 <Radio.Group value={value} onChange={onChange}>
                                     <Space direction='vertical'>
-                                        <Radio value={3}>Bears</Radio>
-                                        <Radio value={2}>Reptiles</Radio>
+                                        <Radio value={3}>
+                                            <div className="flex items-center">
+                                                <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                <svg className="w-6 h-6 text-gray-300 dark:text-gray-500 stroke-gray-400" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                {/* <p class="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">4.95 out of 5</p> */}
+                                                <span className='ml-1'>& up</span>
+                                            </div>
+                                        </Radio>
+                                        <Radio value={3}>
+                                            <div className="flex items-center">
+                                                <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                <svg className="w-6 h-6 text-gray-300 dark:text-gray-500 stroke-gray-400" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                <svg className="w-6 h-6 text-gray-300 dark:text-gray-500 stroke-gray-400" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                {/* <p class="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">4.95 out of 5</p> */}
+                                                <span className='ml-1'>& up</span>
+                                            </div>
+                                        </Radio>
                                     </Space>
                                 </Radio.Group>
                             </div>
@@ -515,8 +554,9 @@ const category = () => {
                             <div className="flex flex-col gap-1">
                                 <Radio.Group value={value} onChange={onChange}>
                                     <Space direction='vertical'>
-                                        <Radio value={3}>Bears</Radio>
-                                        <Radio value={2}>Reptiles</Radio>
+                                        <Radio value={3}>30% off or more</Radio>
+                                        <Radio value={2}>40% off or more</Radio>
+                                        <Radio value={4}>50% off or more</Radio>
                                     </Space>
                                 </Radio.Group>
                             </div>
@@ -531,8 +571,10 @@ const category = () => {
                             <div className="flex flex-col gap-1">
                                 <Radio.Group value={value} onChange={onChange}>
                                     <Space direction='vertical'>
-                                        <Radio value={3}>Bears</Radio>
-                                        <Radio value={2}>Reptiles</Radio>
+                                        <Radio value={3}>Under &#36;5</Radio>
+                                        <Radio value={2}>&#36;5-&#36;10</Radio>
+                                        <Radio value={4}>&#36;10-&#36;17</Radio>
+                                        <Radio value={5}>Over &#36;17</Radio>
                                     </Space>
                                 </Radio.Group>
                             </div>
@@ -544,10 +586,10 @@ const category = () => {
 
                         <div className="flex flex-row gap-2 items-center my-4">
                             <div className='w-[40%]'>
-                                <input placeholder='Min.' className='py-2 text-gray-300 pl-1 outline-none rounded-full w-full border border-gray-200 placeholder:text-gray-300 text-[12px]' />
+                                <input placeholder='$Min.' className='py-2 text-gray-300 pl-1 outline-none rounded-full w-full border border-gray-200 placeholder:text-gray-300 text-[12px]' />
                             </div>
                             <div className='w-[40%]'>
-                                <input placeholder='Max.' className=' py-2 text-gray-300 pl-1 outline-none rounded-full w-full border border-gray-200 placeholder:text-gray-300 text-[12px]' />
+                                <input placeholder='$Max.' className=' py-2 text-gray-300 pl-1 outline-none rounded-full w-full border border-gray-200 placeholder:text-gray-300 text-[12px]' />
                             </div>
                             <div className='w-[20%] flex items-center justify-center'>
                                 <div className='text-[10px] text-center rounded-[50%] p-2 border hover:border-black'>Go</div>
@@ -560,7 +602,7 @@ const category = () => {
                             <div className='text-[24px] leading-[30px] text-[#222222]'>Trending Items</div>
                             <div className='flex gap-[12px] items-center'>
                                 <div className='text-[13px] leading-[19.5px] text-[#222222] font-[400]'>sort by</div>
-                                <div>
+                                <div className='cursor-pointer'>
                                     <Dropdown
                                         placement='bottom'
                                         menu={{
