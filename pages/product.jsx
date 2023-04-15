@@ -38,6 +38,7 @@ import asset170 from '../images/product_photos/asset 170.svg';
 import asset148 from '../images/product_photos/asset 148.svg';
 import asset164 from '../images/product_photos/asset 164.svg';
 import asset114 from '../images/product_photos/asset 114.svg';
+import asset79 from '../images/mobile_assets/asset 79.webp';
 import fire from '../images/product_photos/fire.webp';
 import box from '../images/product_photos/box.webp';
 import muhe from '../images/product_photos/muhe.webp';
