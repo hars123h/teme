@@ -72,7 +72,7 @@ const Card = () => {
                         <div onClick={handleClose} className='select-none cursor-pointer text-[26px] font-[400] text-right float-right'>x</div>
                         <div className="flex flex-row justify-between items-start gap-[10px]">
                             <div className='flex flex-row gap-[2px] w-1/2'>
-                                <div className='flex flex-col gap-[2px]'>
+                                <div className='flex flex-col gap-[2px] w-[65px]'>
                                     <Image src={asset10} onMouseEnter={() => setMainImage(asset10)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
                                     <Image src={asset11} onMouseEnter={() => setMainImage(asset11)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
                                     <Image src={asset12} onMouseEnter={() => setMainImage(asset12)} className='w-[57px] h-[57px] hover:border-gray-600 border' alt='image' />
