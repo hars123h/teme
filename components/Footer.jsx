@@ -10,6 +10,7 @@ import song from '../images/song.png';
 import youtube from '../images/you tube.png';
 import master from '../images/master.webp';
 import paypal from '../images/paypal.webp';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -17,7 +18,7 @@ const Footer = () => {
             <div className='px-[44px] mb-[8px] bg-[#1e1e1e] flex'>
                 <div className='w-[210px] h-[230px] mr-[129px]'>
                     <div className='mb-[8px] leading-[1.5em] text-[14px] font-[700] text-white'>Company info</div>
-                    <div className='mb-[8px] leading-[1.76em] text-[13px] font-[400] text-white opacity-70'>About Temu</div>
+                    <Link href={"/about"}><div className='mb-[8px] leading-[1.76em] text-[13px] font-[400] text-white opacity-70'>About Temu</div></Link>
                     <div className='mb-[8px] leading-[1.5em] text-[12px] font-[400] text-white opacity-40'>Temu - Team Up, Price Down!</div>
                     <div className='mb-[8px] leading-[1.76em] text-[13px] font-[400] text-white opacity-70'>Affiliate & Influencer</div>
                     <div className='mb-[8px] leading-[1.76em] text-[13px] font-[400] text-white opacity-70'>Campus Ambassador</div>

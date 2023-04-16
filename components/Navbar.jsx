@@ -101,7 +101,7 @@ const items = [
 
 const content = (
     <div className=' h-[500px] w-[800px]  flex flex-row'>
-        <div className='w-[20%] bg-white overflow-y-scroll'
+        <div className='w-[20%] bg-white overflow-y-scroll example'
         >
             <div className='text-sm font-[600] py-3 pr-2 bg-white hover:bg-gray-200 cursor-pointer'>
                 <div className='border-l-4 border-orange-500 pl-1'>Featured</div>
@@ -167,7 +167,7 @@ const content = (
                 <div className='pl-1'>Office & School Supplies</div>
             </div>
         </div>
-        <div className='w-[80%] pt-5 px-3 overflow-y-scroll'
+        <div className='w-[80%] pt-5 px-3 overflow-y-scroll example'
 
         >
             <div className='text-md font-[500]'>Shop by category</div>
