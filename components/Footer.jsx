@@ -20,7 +20,7 @@ const Footer = () => {
                     <div className='mb-[8px] leading-[1.5em] text-[14px] font-[700] text-white'>Company info</div>
                     <Link href={"/about"}><div className='mb-[8px] leading-[1.76em] text-[13px] font-[400] text-white opacity-70'>About Temu</div></Link>
                     <div className='mb-[8px] leading-[1.5em] text-[12px] font-[400] text-white opacity-40'>Temu - Team Up, Price Down!</div>
-                    <div className='mb-[8px] leading-[1.76em] text-[13px] font-[400] text-white opacity-70'>Affiliate & Influencer</div>
+                    <Link href={"/affiliate"}><div className='mb-[8px] leading-[1.76em] text-[13px] font-[400] text-white opacity-70'>Affiliate & Influencer</div></Link>
                     <div className='mb-[8px] leading-[1.76em] text-[13px] font-[400] text-white opacity-70'>Campus Ambassador</div>
                     <div className='mb-[8px] leading-[1.76em] text-[13px] font-[400] text-white opacity-70'>Contact Us</div>
                     <div className='mb-[8px] leading-[1.76em] text-[13px] font-[400] text-white opacity-70'>Careers</div>

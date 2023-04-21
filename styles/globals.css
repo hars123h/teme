@@ -340,3 +340,24 @@ swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader,
 .example::-webkit-scrollbar {
   display: none;
 }
+
+.affiliate {
+  background-image: url('../images/affiliate/affiliate\ 1.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 420px;
+}
+
+.affiliate1 {
+  background-image: url('../images/affiliate/affiliate\ 3.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 218px;
+}
+
+.affiliate2 {
+  background-image: url('../images/affiliate/affiliate\ 4.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 218px;
+}
